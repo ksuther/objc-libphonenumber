@@ -26,7 +26,7 @@ Run the included script *build\_libphonenumber\_js.sh* to download and compile t
 
     bash build_libphonenumber_js.sh libphonenumber_build
 
-This will create a single JavaScript file *libphonenumber.js* in your current directly.
+This will create a single JavaScript file *libphonenumber.js* in your current directory.
 
 #### Credits
 Contains a compiled version of libphonenumber (https://code.google.com/p/libphonenumber/) and parts of closure-library (https://code.google.com/p/closure-library/)
