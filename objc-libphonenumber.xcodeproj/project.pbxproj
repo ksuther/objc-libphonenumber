@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		376BA1BC15D0963700AE7CB9 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376BA1BB15D0963700AE7CB9 /* Cocoa.framework */; };
+		376BA1C615D0963700AE7CB9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 376BA1C415D0963700AE7CB9 /* InfoPlist.strings */; };
+		376BA1D115D0965700AE7CB9 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376BA1D015D0965700AE7CB9 /* JavaScriptCore.framework */; };
+		376BA1D815D0968300AE7CB9 /* libphonenumber.js in Resources */ = {isa = PBXBuildFile; fileRef = 376BA1D615D0968100AE7CB9 /* libphonenumber.js */; };
+		376BA1E015D096AB00AE7CB9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376BA1DF15D096AB00AE7CB9 /* Foundation.framework */; };
+		376BA1E315D096AB00AE7CB9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 376BA1E215D096AB00AE7CB9 /* main.m */; };
+		376BA1E715D096AB00AE7CB9 /* objc_libphonenumber_Demo.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 376BA1E615D096AB00AE7CB9 /* objc_libphonenumber_Demo.1 */; };
+		376BA1ED15D096C200AE7CB9 /* objc-libphonenumber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 376BA1B815D0963700AE7CB9 /* objc-libphonenumber.framework */; };
+		376BA1F515D096F300AE7CB9 /* libphonenumberFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 376BA1F315D096F300AE7CB9 /* libphonenumberFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		376BA1F615D096F300AE7CB9 /* libphonenumberFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 376BA1F415D096F300AE7CB9 /* libphonenumberFormatter.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		376BA1EB15D096BF00AE7CB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376BA1AE15D0963700AE7CB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376BA1B715D0963700AE7CB9;
+			remoteInfo = "objc-libphonenumber";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		376BA1DB15D096AB00AE7CB9 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				376BA1E715D096AB00AE7CB9 /* objc_libphonenumber_Demo.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		376BA1B815D0963700AE7CB9 /* objc-libphonenumber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "objc-libphonenumber.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		376BA1BB15D0963700AE7CB9 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		376BA1BE15D0963700AE7CB9 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		376BA1BF15D0963700AE7CB9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		376BA1C015D0963700AE7CB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		376BA1C315D0963700AE7CB9 /* objc-libphonenumber-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "objc-libphonenumber-Info.plist"; sourceTree = "<group>"; };
+		376BA1C515D0963700AE7CB9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		376BA1C715D0963700AE7CB9 /* objc-libphonenumber-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-libphonenumber-Prefix.pch"; sourceTree = "<group>"; };
+		376BA1D015D0965700AE7CB9 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		376BA1D615D0968100AE7CB9 /* libphonenumber.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = libphonenumber.js; sourceTree = SOURCE_ROOT; };
+		376BA1DD15D096AB00AE7CB9 /* objc-libphonenumber Demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "objc-libphonenumber Demo"; sourceTree = BUILT_PRODUCTS_DIR; };
+		376BA1DF15D096AB00AE7CB9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		376BA1E215D096AB00AE7CB9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		376BA1E515D096AB00AE7CB9 /* objc-libphonenumber Demo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "objc-libphonenumber Demo-Prefix.pch"; sourceTree = "<group>"; };
+		376BA1E615D096AB00AE7CB9 /* objc_libphonenumber_Demo.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = objc_libphonenumber_Demo.1; sourceTree = "<group>"; };
+		376BA1F315D096F300AE7CB9 /* libphonenumberFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libphonenumberFormatter.h; sourceTree = "<group>"; };
+		376BA1F415D096F300AE7CB9 /* libphonenumberFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = libphonenumberFormatter.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		376BA1B415D0963700AE7CB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376BA1BC15D0963700AE7CB9 /* Cocoa.framework in Frameworks */,
+				376BA1D115D0965700AE7CB9 /* JavaScriptCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376BA1DA15D096AB00AE7CB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376BA1E015D096AB00AE7CB9 /* Foundation.framework in Frameworks */,
+				376BA1ED15D096C200AE7CB9 /* objc-libphonenumber.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		376BA1AC15D0963700AE7CB9 = {
+			isa = PBXGroup;
+			children = (
+				376BA1C115D0963700AE7CB9 /* objc-libphonenumber */,
+				376BA1E115D096AB00AE7CB9 /* objc-libphonenumber Demo */,
+				376BA1BA15D0963700AE7CB9 /* Frameworks */,
+				376BA1B915D0963700AE7CB9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		376BA1B915D0963700AE7CB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				376BA1B815D0963700AE7CB9 /* objc-libphonenumber.framework */,
+				376BA1DD15D096AB00AE7CB9 /* objc-libphonenumber Demo */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		376BA1BA15D0963700AE7CB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				376BA1BB15D0963700AE7CB9 /* Cocoa.framework */,
+				376BA1D015D0965700AE7CB9 /* JavaScriptCore.framework */,
+				376BA1DF15D096AB00AE7CB9 /* Foundation.framework */,
+				376BA1BD15D0963700AE7CB9 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		376BA1BD15D0963700AE7CB9 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				376BA1BE15D0963700AE7CB9 /* AppKit.framework */,
+				376BA1BF15D0963700AE7CB9 /* CoreData.framework */,
+				376BA1C015D0963700AE7CB9 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		376BA1C115D0963700AE7CB9 /* objc-libphonenumber */ = {
+			isa = PBXGroup;
+			children = (
+				376BA1F315D096F300AE7CB9 /* libphonenumberFormatter.h */,
+				376BA1F415D096F300AE7CB9 /* libphonenumberFormatter.m */,
+				376BA1D615D0968100AE7CB9 /* libphonenumber.js */,
+				376BA1C215D0963700AE7CB9 /* Supporting Files */,
+			);
+			path = "objc-libphonenumber";
+			sourceTree = "<group>";
+		};
+		376BA1C215D0963700AE7CB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				376BA1C315D0963700AE7CB9 /* objc-libphonenumber-Info.plist */,
+				376BA1C415D0963700AE7CB9 /* InfoPlist.strings */,
+				376BA1C715D0963700AE7CB9 /* objc-libphonenumber-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		376BA1E115D096AB00AE7CB9 /* objc-libphonenumber Demo */ = {
+			isa = PBXGroup;
+			children = (
+				376BA1E215D096AB00AE7CB9 /* main.m */,
+				376BA1E615D096AB00AE7CB9 /* objc_libphonenumber_Demo.1 */,
+				376BA1E415D096AB00AE7CB9 /* Supporting Files */,
+			);
+			path = "objc-libphonenumber Demo";
+			sourceTree = "<group>";
+		};
+		376BA1E415D096AB00AE7CB9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				376BA1E515D096AB00AE7CB9 /* objc-libphonenumber Demo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		376BA1B515D0963700AE7CB9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376BA1F515D096F300AE7CB9 /* libphonenumberFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		376BA1B715D0963700AE7CB9 /* objc-libphonenumber */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376BA1CD15D0963700AE7CB9 /* Build configuration list for PBXNativeTarget "objc-libphonenumber" */;
+			buildPhases = (
+				376BA1B315D0963700AE7CB9 /* Sources */,
+				376BA1B415D0963700AE7CB9 /* Frameworks */,
+				376BA1B515D0963700AE7CB9 /* Headers */,
+				376BA1B615D0963700AE7CB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "objc-libphonenumber";
+			productName = "objc-libphonenumber";
+			productReference = 376BA1B815D0963700AE7CB9 /* objc-libphonenumber.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		376BA1DC15D096AB00AE7CB9 /* objc-libphonenumber Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376BA1E815D096AB00AE7CB9 /* Build configuration list for PBXNativeTarget "objc-libphonenumber Demo" */;
+			buildPhases = (
+				376BA1D915D096AB00AE7CB9 /* Sources */,
+				376BA1DA15D096AB00AE7CB9 /* Frameworks */,
+				376BA1DB15D096AB00AE7CB9 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376BA1EC15D096BF00AE7CB9 /* PBXTargetDependency */,
+			);
+			name = "objc-libphonenumber Demo";
+			productName = "objc-libphonenumber Demo";
+			productReference = 376BA1DD15D096AB00AE7CB9 /* objc-libphonenumber Demo */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		376BA1AE15D0963700AE7CB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+				ORGANIZATIONNAME = "Flexibits Inc.";
+			};
+			buildConfigurationList = 376BA1B115D0963700AE7CB9 /* Build configuration list for PBXProject "objc-libphonenumber" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 376BA1AC15D0963700AE7CB9;
+			productRefGroup = 376BA1B915D0963700AE7CB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				376BA1B715D0963700AE7CB9 /* objc-libphonenumber */,
+				376BA1DC15D096AB00AE7CB9 /* objc-libphonenumber Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		376BA1B615D0963700AE7CB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376BA1C615D0963700AE7CB9 /* InfoPlist.strings in Resources */,
+				376BA1D815D0968300AE7CB9 /* libphonenumber.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		376BA1B315D0963700AE7CB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376BA1F615D096F300AE7CB9 /* libphonenumberFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376BA1D915D096AB00AE7CB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376BA1E315D096AB00AE7CB9 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		376BA1EC15D096BF00AE7CB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376BA1B715D0963700AE7CB9 /* objc-libphonenumber */;
+			targetProxy = 376BA1EB15D096BF00AE7CB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		376BA1C415D0963700AE7CB9 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376BA1C515D0963700AE7CB9 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		376BA1CB15D0963700AE7CB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		376BA1CC15D0963700AE7CB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		376BA1CE15D0963700AE7CB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-libphonenumber/objc-libphonenumber-Prefix.pch";
+				INFOPLIST_FILE = "objc-libphonenumber/objc-libphonenumber-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		376BA1CF15D0963700AE7CB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_VERSION = A;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-libphonenumber/objc-libphonenumber-Prefix.pch";
+				INFOPLIST_FILE = "objc-libphonenumber/objc-libphonenumber-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
+		376BA1E915D096AB00AE7CB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-libphonenumber Demo/objc-libphonenumber Demo-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		376BA1EA15D096AB00AE7CB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "objc-libphonenumber Demo/objc-libphonenumber Demo-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		376BA1B115D0963700AE7CB9 /* Build configuration list for PBXProject "objc-libphonenumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376BA1CB15D0963700AE7CB9 /* Debug */,
+				376BA1CC15D0963700AE7CB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376BA1CD15D0963700AE7CB9 /* Build configuration list for PBXNativeTarget "objc-libphonenumber" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376BA1CE15D0963700AE7CB9 /* Debug */,
+				376BA1CF15D0963700AE7CB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376BA1E815D096AB00AE7CB9 /* Build configuration list for PBXNativeTarget "objc-libphonenumber Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376BA1E915D096AB00AE7CB9 /* Debug */,
+				376BA1EA15D096AB00AE7CB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 376BA1AE15D0963700AE7CB9 /* Project object */;
+}

@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'objc-libphonenumber' target in the 'objc-libphonenumber' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
