@@ -19,7 +19,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <libphonenumber_js/libphonenumberFormatter.h>
+#import <objc-libphonenumber/libphonenumberFormatter.h>
 
 int main(int argc, const char * argv[])
 {
@@ -29,8 +29,15 @@ int main(int argc, const char * argv[])
         [formatter setCountryCode:@"US"];
         [formatter setAlwaysUseInternationalFormat:YES];
         
+        NSLog(@"Using PhoneNumberFormat");
         NSLog(@"%@", [formatter stringForObjectValue:@"3151234567"]);
         NSLog(@"%@", [formatter stringForObjectValue:@"+44 020 1234 5678"]);
+        
+        [formatter setUseAsYouTypeFormatter:YES];
+        
+        NSLog(@"Using AsYouTypeFormatter");
+        NSLog(@"%@", [formatter stringForObjectValue:@"+13151234"]);
+        NSLog(@"%@", [formatter stringForObjectValue:@"+4402012"]);
     }
     return 0;
 }

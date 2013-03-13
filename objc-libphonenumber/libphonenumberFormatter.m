@@ -22,16 +22,28 @@
 #import <JavaScriptCore/JavaScriptCore.h>
 
 //JavaScript that is called by stringForObjectValue:
-NSString * const FormatScript = @"function formatNumber() {\
+static NSString * const FormatScript = @"function formatNumber() {\
 var PNF = i18n.phonenumbers.PhoneNumberFormat;\
 var phoneUtil = i18n.phonenumbers.PhoneNumberUtil.getInstance();\
 var number = phoneUtil.parseAndKeepRawInput(\"%1$@\", \"%2$@\");\
 var isNumberValid = phoneUtil.isValidNumber(number);\
 var region = phoneUtil.getRegionCodeForNumber(number);\
-var type = (region == \"%$2@\" || region == null) ? PNF.%3$@ : PNF.INTERNATIONAL;\
+var type = (region == \"%2$@\" || region == null) ? PNF.%3$@ : PNF.INTERNATIONAL;\
 return phoneUtil.format(number, type);\
 }\
 formatNumber();";
+
+//JavaScript for AsYouTypeFormatter when useAsYouTypeFormatter is YES
+static NSString * const AsYouTypeFormatScript = @"function formatAsYouTypeNumber() {\
+var input = \"%1$@\";\
+var result = null;\
+var formatter = new i18n.phonenumbers.AsYouTypeFormatter('%2$@');\
+for (var i = 0; i < input.length; i++) {\
+    result = formatter.inputDigit(input.charAt(i));\
+}\
+return result;\
+}\
+formatAsYouTypeNumber();";
 
 @interface libphonenumberFormatter ()
 @property(nonatomic, assign) JSGlobalContextRef JSContext;
@@ -68,7 +80,14 @@ formatNumber();";
     anObject = [anObject stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
     
     NSString *nationalOrInternational = [self alwaysUseInternationalFormat] ? @"INTERNATIONAL" : @"NATIONAL";
-    NSString *formatScriptString = [NSString stringWithFormat:FormatScript, anObject, [self countryCode], nationalOrInternational];
+    NSString *formatScriptString = nil;
+    
+    if ([self useAsYouTypeFormatter]) {
+        formatScriptString = [NSString stringWithFormat:AsYouTypeFormatScript, anObject, [self countryCode]];
+    } else {
+        formatScriptString = [NSString stringWithFormat:FormatScript, anObject, [self countryCode], nationalOrInternational];
+    }
+    
     NSString *exceptionString = NULL;
     NSString *result = [self _runScript:formatScriptString exceptionString:&exceptionString];
     

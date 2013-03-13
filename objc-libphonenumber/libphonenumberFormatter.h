@@ -24,5 +24,6 @@
 
 @property(nonatomic, strong) NSString *countryCode; //defaults to NSLocale's currentLocale countryCode
 @property(nonatomic, assign) BOOL alwaysUseInternationalFormat; //defaults to NO
+@property(nonatomic, assign) BOOL useAsYouTypeFormatter; //defaults to NO
 
 @end

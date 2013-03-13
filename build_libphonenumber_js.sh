@@ -20,10 +20,12 @@ cd $DOWNLOAD_DIR
 closure-library/closure/bin/build/closurebuilder.py \
     --root=closure-library \
     --namespace="i18n.phonenumbers.PhoneNumberUtil" \
+    --namespace="i18n.phonenumbers.AsYouTypeFormatter" \
     --output_mode=compiled \
     --compiler_jar=compiler.jar \
     libphonenumber/javascript/i18n/phonenumbers/metadata.js \
     libphonenumber/javascript/i18n/phonenumbers/phonemetadata.pb.js \
     libphonenumber/javascript/i18n/phonenumbers/phonenumber.pb.js \
     libphonenumber/javascript/i18n/phonenumbers/phonenumberutil.js \
+    libphonenumber/javascript/i18n/phonenumbers/asyoutypeformatter.js \
         > $CWD/libphonenumber.js
