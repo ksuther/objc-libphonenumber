@@ -79,19 +79,24 @@ formatAsYouTypeNumber();";
     NSAssert([anObject isKindOfClass:[NSString class]], @"anObject must be a string");
     anObject = [anObject stringByReplacingOccurrencesOfString:@"\"" withString:@"\\\""];
     
-    NSString *nationalOrInternational = [self alwaysUseInternationalFormat] ? @"INTERNATIONAL" : @"NATIONAL";
-    NSString *formatScriptString = nil;
+    NSString *result = nil;
     
-    if ([self useAsYouTypeFormatter]) {
-        formatScriptString = [NSString stringWithFormat:AsYouTypeFormatScript, anObject, [self countryCode]];
-    } else {
-        formatScriptString = [NSString stringWithFormat:FormatScript, anObject, [self countryCode], nationalOrInternational];
+    if ([anObject length] > 0) {
+        NSString *nationalOrInternational = [self alwaysUseInternationalFormat] ? @"INTERNATIONAL" : @"NATIONAL";
+        NSString *formatScriptString = nil;
+        
+        if ([self useAsYouTypeFormatter]) {
+            formatScriptString = [NSString stringWithFormat:AsYouTypeFormatScript, anObject, [self countryCode]];
+        } else {
+            formatScriptString = [NSString stringWithFormat:FormatScript, anObject, [self countryCode], nationalOrInternational];
+        }
+        
+        NSString *exceptionString = NULL;
+        
+        result = [self _runScript:formatScriptString exceptionString:&exceptionString];
+        
+        NSAssert(exceptionString == nil, exceptionString);
     }
-    
-    NSString *exceptionString = NULL;
-    NSString *result = [self _runScript:formatScriptString exceptionString:&exceptionString];
-    
-    NSAssert(exceptionString == nil, exceptionString);
     
     return result;
 }
